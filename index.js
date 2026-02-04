@@ -1,11 +1,5 @@
-import app from '@/app.js';
-import { serve } from 'bun';
+import app from './src/app.js';
 
-const port = process.env.PORT || 3030;
-const bunApp = serve({
-  port,
-  fetch: app.fetch,
-  idleTimeout: 20,
-});
-
-console.log(`server is running visit ${bunApp.url}doc for docs`);
+// Vercel handles the server and port automatically.
+// We just need to export the Hono app instance as the default export.
+export default app;
