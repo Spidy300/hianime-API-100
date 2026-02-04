@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "buildCommand": null,
-  "outputDirectory": ".",
+  "bunVersion": "1.x",
   "installCommand": "bun install",
-  "framework": null,
+  "buildCommand": "echo 'No build step required'",
+  "outputDirectory": ".",
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/src/index.ts"
+      "source": "/(.*)",
+      "destination": "/src/app.js"
     }
   ]
 }
